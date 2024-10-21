@@ -30,6 +30,7 @@ public class DBUserDataAccessObject implements SignupUserDataAccessInterface,
     private static final String PASSWORD = "password";
     private static final String MESSAGE = "message";
     private final UserFactory userFactory;
+    private String currentUser;
 
     public DBUserDataAccessObject(UserFactory userFactory) {
         this.userFactory = userFactory;
@@ -151,4 +152,15 @@ public class DBUserDataAccessObject implements SignupUserDataAccessInterface,
             throw new RuntimeException(ex);
         }
     }
+
+    @Override
+    public void setCurrentUser(String name) {
+        currentUser = name;
+    }
+
+    @Override
+    public String getCurrentUser() {
+        return currentUser;
+    }
+
 }
