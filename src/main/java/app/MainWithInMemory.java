@@ -6,9 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
-import data_access.DBUserDataAccessObject;
 import data_access.InMemoryUserDataAccessObject;
-import entity.CommonUserFactory;
 import interface_adapter.ViewManagerModel;
 import interface_adapter.logged_in.LoggedInViewModel;
 import interface_adapter.login.LoginViewModel;
@@ -23,7 +21,7 @@ import view.ViewManager;
  */
 public class MainWithInMemory {
 
-    /**`
+    /**
      * The main method for starting the program with an external database used to persist user data.
      * @param args input to main
      */
